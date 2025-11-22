@@ -1,1 +1,132 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8" /><title>Flowers for Pragati</title><meta name="viewport" content="width=device-width,initial-scale=1" /><style>  body{    margin:0;    padding:40px 12px;    font-family: "Poppins", system-ui, sans-serif;    text-align:center;    background:radial-gradient(circle at top,#ffe6f7,#0f1130);    color:#fff;  }  #box{    margin:20px auto;    max-width:600px;    padding:20px;    background:rgba(255,255,255,0.08);    border-radius:18px;    backdrop-filter:blur(6px);    box-shadow:0 14px 40px rgba(0,0,0,0.4);  }  img{    max-width:100%;    border-radius:14px;    box-shadow:0 10px 30px rgba(0,0,0,0.6);  }  #caption{    margin-top:16px;    font-size:20px;    font-weight:600;  }  #message{    margin-top:10px;    opacity:0.9;    font-size:15px;  }</style></head><body><h1>Flowers for Pragati 🌸</h1><div id="box">  <div id="flower"></div>  <div id="caption"></div>  <div id="message"></div></div><script>// CHANGE THESE to your GitHub raw image URLs:const IMAGE_23 = "https://raw.githubusercontent.com/Harsh02709/27th/main/sunflower2.png"; // Gothic flower (3rd.png)const IMAGE_24 = "https://raw.githubusercontent.com/Harsh02709/27th/main/rose1.png"; // Slim rose (rose1.png)const IMAGE_25 = "https://raw.githubusercontent.com/Harsh02709/27th/main/sunflower2.png"; // Sunflower (4thaiandpaint.png)const IMAGE_26 = "https://raw.githubusercontent.com/Harsh02709/27th/main/3rd.png"; // Gothic moon (3rd.png)const IMAGE_27 = "https://raw.githubusercontent.com/Harsh02709/27th/main/bluemoon4"; // Blue Moon birthday rose (bluemoon4.png)const flowerBox = document.getElementById("flower");const caption = document.getElementById("caption");const msg = document.getElementById("message");const today = new Date();const date = today.getDate(); // 1–31function show(img, cap, text){  flowerBox.innerHTML = `<img src="${img}" />`;  caption.textContent = cap;  msg.textContent = text;}// Logic for specific daysswitch(date){  case 23:    show(IMAGE_23,      "Gothic flowers for your soul (Pragati)",      "This is your flower for the 23rd 🌸");    break;  case 24:    show(IMAGE_24,      "A slim rose for my Prag",      "Your 24th day flower 💐");    break;  case 25:    show(IMAGE_25,      "A sunflower for my bright Prag",      "Your 25th day flower ☀️");    break;  case 26:    show(IMAGE_26,      "A gothic moon for my girl",      "Your 26th day flower 🌙🌹");    break;  case 27:    show(IMAGE_27,      "Blue Moon rose for my princess",      "Happy Birthdayy 🎂💙 Pragati Pragati Plaaaaagatiii");    break;  default:    flowerBox.innerHTML = "";    caption.textContent = "💐 Seeds planted";    msg.textContent = "Wait till next year… and keep watering your boyfriend (me) 🌱💧";    break;}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Flowers for Pragati</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<style>
+  body{
+    margin:0;
+    padding:40px 12px;
+    font-family: "Poppins", system-ui, sans-serif;
+    text-align:center;
+    background:radial-gradient(circle at top,#ffe6f7,#0f1130);
+    color:#fff;
+  }
+  h1{
+    margin:0 0 16px;
+    font-size:24px;
+  }
+  #box{
+    margin:20px auto;
+    max-width:600px;
+    padding:20px;
+    background:rgba(255,255,255,0.08);
+    border-radius:18px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 14px 40px rgba(0,0,0,0.45);
+  }
+  #flower img{
+    max-width:100%;
+    height:auto;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+  }
+  #caption{
+    margin-top:16px;
+    font-size:20px;
+    font-weight:600;
+  }
+  #message{
+    margin-top:10px;
+    opacity:0.9;
+    font-size:15px;
+  }
+  #today{
+    margin-top:12px;
+    font-size:12px;
+    opacity:0.8;
+  }
+</style>
+</head>
+<body>
+
+<h1>Flowers for Pragati 🌸</h1>
+
+<div id="box">
+  <div id="flower"></div>
+  <div id="caption"></div>
+  <div id="message"></div>
+  <div id="today"></div>
+</div>
+
+<script>
+// Images are in the same folder as this HTML file
+const IMG_23 = "sunflower2.png";    // 23rd – sunflower
+const IMG_24 = "rose1.png";         // 24th – slim rose
+const IMG_25 = "4thaiandpaint.png"; // 25th – AI / gothic moon
+const IMG_26 = "3rd.png";           // 26th – gothic flowers
+const IMG_27 = "bluemoon4.png";     // 27th – Blue Moon birthday rose
+
+const flowerDiv = document.getElementById("flower");
+const caption   = document.getElementById("caption");
+const message   = document.getElementById("message");
+const todayDiv  = document.getElementById("today");
+
+const now   = new Date();
+const date  = now.getDate();      // 1–31
+const month = now.getMonth() + 1; // 1–12
+
+todayDiv.textContent = "Your browser thinks today is: " + now.toDateString();
+
+function show(img, cap, text) {
+  flowerDiv.innerHTML = `<img src="${img}" alt="">`;
+  caption.textContent = cap;
+  message.textContent = text;
+}
+
+// If you ever want to lock to a specific month, e.g. February:
+// if (month !== 2) { /* show seeds message and return */ }
+
+switch (date) {
+  case 23:
+    show(IMG_23,
+      "A sunflower for my bright Prag",
+      "Your 23rd day flower ☀️");
+    break;
+
+  case 24:
+    show(IMG_24,
+      "A slim rose for my Prag",
+      "Your 24th day flower 💐");
+    break;
+
+  case 25:
+    show(IMG_25,
+      "A gothic moon for my girl",
+      "Your 25th day flower 🌙🌹");
+    break;
+
+  case 26:
+    show(IMG_26,
+      "Gothic flowers for your soul (Pragati)",
+      "Your 26th day flower 🌸");
+    break;
+
+  case 27:
+    show(IMG_27,
+      "Blue Moon rose for my princess",
+      "Happy Birthdayy 🎂💙");
+    break;
+
+  default:
+    flowerDiv.innerHTML = "";
+    caption.textContent = "💐 Seeds planted";
+    message.textContent =
+      "The seeds are planted. Wait till next year… keep watering your boyfriend 🌱💧";
+    break;
+}
+</script>
+
+</body>
+</html>
